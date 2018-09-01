@@ -1,0 +1,35 @@
+#配置数据源
+spring:
+  datasource:
+     url: jdbc:mysql://127.0.0.1:3306/library?useUnicode=true&characterEncoding=utf8
+     username: root
+     password: 123
+     driver-class-name: com.mysql.jdbc.Driver
+#springmvc前端控制器
+  mvc:
+     view:
+         prefix: /
+         suffix: .html
+
+#指定mybatis映射文件的地址
+mybatis:
+     mapper-locations: classpath:com.yxw.mapper/*.xml
+     type-aliases-package: com.yxw.pojo
+#定义别名
+
+#logging配置
+logging:
+  config: classpath:log4j2.xml
+
+#pagehelper分页插件配置
+#pagehelper.helperDialect=mysql
+#pagehelper.reasonable=true
+#pagehelper.supportMethodsArguments=true
+#pagehelper.params=count=countSql
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: countSql
+
+

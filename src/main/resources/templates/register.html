@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="/js/jquery-easyui-1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-easyui-1.6.2/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-easyui-1.6.2/locale/easyui-lang-zh_CN.js"></script>
+    <link rel="stylesheet" href="/js/jquery-easyui-1.6.2/themes/default/easyui.css" type="text/css"/>
+    <link rel="stylesheet" href="/js/jquery-easyui-1.6.2/themes/icon.css" type="text/css"/>
+    <script src="/js/index.js"></script>
+    <style>
+        .panel {
+            margin-left: 460px;
+        }
+        .combo-p{
+            margin-left: 0px!important;
+        }
+    </style>
+    <title>图书借阅系统-注册</title>
+</head>
+<body>
+<h2 style="text-align: center">图书借阅系统</h2>
+<p style="text-align: center">会员注册</p>
+<div style="margin:20px 0;"></div>
+<div class="easyui-panel" title="欢迎注册" style="width:400px">
+    <div style="padding:10px 60px 20px 60px">
+        <form id="ff" class="easyui-form" method="post" >
+            <table cellpadding="5">
+                <tr>
+                    <td>用户名:</td>
+                    <td><input class="easyui-textbox" type="text" name="userCode" data-options="required:true"/></td>
+                </tr>
+                <tr>
+                    <td>密码:</td>
+                    <td><input class="easyui-textbox" type="password" name="password" id="password" data-options="required:true"/></td>
+                </tr>
+                <tr>
+                    <td>确认密码:</td>
+                    <td><input class="easyui-textbox" type="password" name="repassword" data-options="required:true,"  validType="equalTo['#password']" invalidMessage="两次输入密码不匹配"/></td>
+                </tr>
+                <tr>
+                    <td>性别:</td>
+                    <td><select class="easyui-combobox" name="gender" style="width: 140px"><option value="男">男</option><option value="女">女</option></select></td>
+                </tr>
+                <tr>
+                    <td>邮箱:</td>
+                    <td><input class="easyui-textbox" type="text" name="email" data-options="required:true,validType:'email'"/></td>
+                </tr>
+            </table>
+        </form>
+        <div style="text-align:center;padding:5px">
+            <a href="javascript:registerForm()" class="easyui-linkbutton" >提交</a>
+            <a href="javascript:history.go(-1)" class="easyui-linkbutton" >返回</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

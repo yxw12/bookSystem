@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>图书借阅系统-登录</title>
+    <script type="text/javascript" src="/js/jquery-easyui-1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-easyui-1.6.2/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-easyui-1.6.2/locale/easyui-lang-zh_CN.js"></script>
+    <link rel="stylesheet" href="/js/jquery-easyui-1.6.2/themes/default/easyui.css" type="text/css"/>
+    <link rel="stylesheet" href="/js/jquery-easyui-1.6.2/themes/icon.css" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="/js/jquery-easyui-1.6.2/demo/demo.css">
+    <script th:src="@{/js/jquery-2.1.1.min.js}"></script>
+    <script th:src="@{/js/index.js}"></script>
+    <style>
+        .panel {
+            margin-left: 460px;
+        }
+    </style>
+</head>
+<body>
+<br>
+<h2 style="text-align: center">图书借阅系统</h2>
+<p style="text-align: center">Welcome to the world of books.</p>
+<div style="margin:20px 0;text-align: center"></div>
+<div class="easyui-panel" title="欢迎登录" style="width:400px;" >
+    <div style="padding:10px 60px 20px 60px;">
+        <form id="ff1" method="post">
+            <table cellpadding="5">
+                <tr>
+                    <td>用户名:</td>
+                    <td><input class="easyui-textbox" type="text" name="userCode" id="userCode" data-options="required:true"/></td>
+                </tr>
+                <tr>
+                    <td>密码:</td>
+                    <td><input class="easyui-textbox" type="password" name="password" id="password" data-options="required:true"/></td>
+                </tr>
+            </table>
+        </form>
+        <div style="text-align:center;padding:5px">
+            <a href="javascript:submitForm()" class="easyui-linkbutton">登录</a>
+            <a href="javascript:registerUser()" class="easyui-linkbutton" >注册</a>
+        </div>
+    </div>
+</div>
+    </div>
+</body>
+</html>
